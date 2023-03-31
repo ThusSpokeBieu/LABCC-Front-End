@@ -1,0 +1,72 @@
+mat-card {
+  max-width: 30rem;
+  margin: 1.3rem auto;
+  text-align: center;
+  max-height: 100vh;
+  border-radius: 0.5rem;
+  padding-top: 0.2rem;
+  font-size: 1rem;
+}
+
+.error-message {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: red;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 1.25rem;
+}
+
+.full-width {
+  width: 80%;
+}
+
+.forgot-password {
+  padding-left: 0px;
+}
+
+.email-input {
+  padding-top: 0.3rem;
+}
+
+.password-input {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #2c2c2c;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.my-button {
+  padding: 1.5rem 9.5rem !important;
+  min-width: unset !important;
+  margin-bottom: 1rem;
+  background-color: #0073cf !important;
+}
+
+.redirect-wrapper {
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.redirect-wrapper p {
+  margin: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
