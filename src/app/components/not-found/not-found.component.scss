@@ -1,0 +1,31 @@
+@use "../sign-in/sign-in.component.scss" as signIn;
+
+.not-found-container {
+  align-items: center;
+  height: 100vh;
+}
+
+.not-found-card {
+  width: 25rem;
+}
+
+mat-card-title,
+mat-card-subtitle {
+  font-size: 3rem;
+  margin: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.return-button {
+  @extend signIn, .login-button !optional;
+}
+
+.icon-container {
+  @extend signIn, .icon-container !optional;
+}
