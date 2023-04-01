@@ -28,5 +28,13 @@ export class SignInComponent {
     });
   }
 
-  onLogin() {}
+  onSubmit() {
+    console.log(this.loginForm);
+
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+
+    console.log(email);
+    console.log(password);
+  }
 }

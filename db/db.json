@@ -1,24 +1,34 @@
 {
-  "modelos": [
+  "users": [
     {
       "id": 1,
-      "nome": "Modelo 1",
-      "colecao": 1
+      "name": "admin",
+      "company": "LABFashion LTDA",
+      "CNPJ": "434.064.470-66",
+      "email": "admin@lab.com",
+      "password": "adminTest"
+    }
+  ],
+  "models": [
+    {
+      "id": 1,
+      "name": "Modelo 1",
+      "colection": 1
     },
     {
       "id": 2,
       "nome": "Modelo 2",
-      "colecao": 1
+      "colection": 1
     }
   ],
-  "colecoes": [
+  "colections": [
     {
       "id": 1,
-      "nome": "Coleção 1"
+      "name": "Coleção 1"
     },
     {
       "id": 2,
-      "nome": "Coleção 2"
+      "name": "Coleção 2"
     }
   ]
 }

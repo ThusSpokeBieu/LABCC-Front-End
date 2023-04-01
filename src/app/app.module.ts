@@ -13,10 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, SignInComponent, ForgotPasswordComponent, NotFoundComponent],
+  declarations: [AppComponent, SignInComponent, ForgotPasswordComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
