@@ -1,5 +1,5 @@
 import { Model } from '../model/model.model';
-import { newCollectionDto } from './collection-new.dto';
+import { CollectionDto } from './collection.dto';
 import { STATIONS } from './station.enum';
 
 export class Collection {
@@ -15,7 +15,7 @@ export class Collection {
   updatedAt!: Date;
   createdAt!: Date;
 
-  constructor(collection: newCollectionDto | null) {
+  constructor(collection: CollectionDto | null) {
     if (!!collection) {
       this.collectionName = collection?.collectionName;
       this.responsible = collection?.responsible;

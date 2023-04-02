@@ -4,6 +4,12 @@ import { HomeComponent } from './components/home/home.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { ModelsComponent } from './components/models/models.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CollectionListComponent } from './components/collection-list/collection-list.component';
+import { CollectionRegisterComponent } from './components/collection-register/collection-register.component';
+import { CollectionEditComponent } from './components/collection-edit/collection-edit.component';
+import { ModelsListComponent } from './components/models-list/models-list.component';
+import { ModelsEditComponent } from './components/models-edit/models-edit.component';
+import { ModelsRegisterComponent } from './components/models-register/models-register.component';
 
 const routes: Routes = [
   {
@@ -14,8 +20,41 @@ const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
       },
-      { path: 'collections', component: CollectionComponent },
-      { path: 'models', component: ModelsComponent },
+
+      {
+        path: 'collections',
+        component: CollectionComponent,
+        children: [
+          {
+            path: '',
+            component: CollectionListComponent,
+          },
+          {
+            path: 'new',
+            component: CollectionRegisterComponent,
+          },
+          {
+            path: 'edit',
+            component: CollectionEditComponent,
+          },
+          {
+            path: '**',
+            redirectTo: '',
+            pathMatch: 'full',
+          },
+        ],
+      },
+
+      {
+        path: 'models',
+        component: ModelsComponent,
+        children: [
+          { path: '', component: ModelsListComponent },
+          { path: 'edit', component: ModelsEditComponent },
+          { path: 'new', component: ModelsRegisterComponent },
+          { path: '**', redirectTo: '', pathMatch: 'full' },
+        ],
+      },
       { path: '**', redirectTo: '/lab/dashboard', pathMatch: 'full' },
     ],
   },
