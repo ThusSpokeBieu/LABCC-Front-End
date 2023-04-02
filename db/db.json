@@ -21,31 +21,6 @@
       "id": 2
     }
   ],
-  "models": [
-    {
-      "id": 1,
-      "name": "Modelo 1",
-      "colection": 1
-    },
-    {
-      "id": 2,
-      "nome": "Modelo 2",
-      "colection": 1
-    }
-  ],
-  "collections": [
-    {
-      "models": [],
-      "quantityModels": 0,
-      "collectionName": "Teste",
-      "responsible": "Teste",
-      "season": "verão",
-      "brand": "teste",
-      "budget": 12314,
-      "releaseYear": 2132,
-      "updatedAt": "2023-04-02T18:30:48.741Z",
-      "createdAt": "2023-04-02T18:30:48.741Z",
-      "id": 3
-    }
-  ]
+  "models": [],
+  "collections": []
 }

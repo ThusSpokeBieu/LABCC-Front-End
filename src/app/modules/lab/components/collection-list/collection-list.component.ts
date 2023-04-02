@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { CollectionDto } from 'src/app/models/collection/collection.dto';
 import { CollectionService } from 'src/app/services/collection.service';
 import { ToastrService } from 'ngx-toastr';
+import { Collection } from 'src/app/models/collection/collection.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-collection-list',
@@ -9,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./collection-list.component.scss'],
 })
 export class CollectionListComponent {
-  collections: CollectionDto[] = [];
+  collections: Collection[] = [];
   columnsDisplay: string[] = [
     'collectionName',
     'responsible',
@@ -21,9 +22,18 @@ export class CollectionListComponent {
 
   constructor(
     private readonly collectionService: CollectionService,
-    private readonly toastr: ToastrService
+    private readonly toastr: ToastrService,
+    private readonly router: Router
   ) {
     this.getCollections();
+  }
+
+  redirectToCollection(id: number) {
+    console.log(id);
+    this.router.navigateByUrl(`/lab/collections/edit/${id}`, {
+      skipLocationChange: true,
+      replaceUrl: true,
+    });
   }
 
   getCollections() {

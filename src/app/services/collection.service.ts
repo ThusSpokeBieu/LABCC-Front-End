@@ -28,6 +28,6 @@ export class CollectionService {
   }
 
   updateCollection(collectionId: number, inputData: Partial<Collection>) {
-    return this.http.put(`${this.endpoint}/${collectionId}`, inputData);
+    return this.http.patch(`${this.endpoint}/${collectionId}`, inputData);
   }
 }

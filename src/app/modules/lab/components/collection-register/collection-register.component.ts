@@ -31,6 +31,7 @@ export class CollectionRegisterComponent {
   onSubmit() {
     if (this.newCollectionForm.valid) {
       const collection: CollectionDto = this.newCollectionForm.value;
+      console.log('oi');
       this.collectionService.registerNewCollection(collection).subscribe();
     } else {
       this.toastr.error(`Por favor, insira todos os campos corretamente.`);

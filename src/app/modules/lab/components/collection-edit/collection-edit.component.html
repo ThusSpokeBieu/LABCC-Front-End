@@ -1,1 +1,66 @@
-<p>collection-edit works!</p>
+<div class="collection-edit">
+  <div class="title">Editar a coleção</div>
+  <div class="edit-collection-form">
+    <form
+      (ngSubmit)="onSubmit()"
+      name="editCollectionForm"
+      [formGroup]="editCollectionForm"
+    >
+      <div class="form-row">
+        <div class="form-column">
+          <mat-form-field appearance="outline">
+            <mat-label>Nome da Coleção</mat-label>
+            <input matInput formControlName="collectionName" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Para qual estação?</mat-label>
+            <mat-select formControlName="season">
+              <mat-option value="Verão">Verão</mat-option>
+              <mat-option value="Primavera">Primavera</mat-option>
+              <mat-option value="Inverno">Inverno</mat-option>
+              <mat-option value="Outono">Outono</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Qual é o orçamento dessa coleção?</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="0"
+              formControlName="budget"
+              inputMode="numeric"
+            />
+            <span matTextPrefix>R$&nbsp;</span>
+            <span matTextSuffix>,00</span>
+          </mat-form-field>
+        </div>
+        <div class="form-column">
+          <mat-form-field appearance="outline">
+            <mat-label>Responsável pela coleção</mat-label>
+            <input matInput formControlName="responsible" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Para qual marca está criando?</mat-label>
+            <input matInput formControlName="brand" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ano de lançamento</mat-label>
+            <input
+              matInput
+              type="number"
+              inputMode="numeric"
+              formControlName="releaseYear"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button mat-raised-button color="warn" routerLink="../">
+          Cancelar
+        </button>
+        <button mat-raised-button color="primary">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>

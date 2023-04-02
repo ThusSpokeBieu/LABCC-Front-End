@@ -34,7 +34,7 @@ const routes: Routes = [
             component: CollectionRegisterComponent,
           },
           {
-            path: 'edit',
+            path: 'edit/:id',
             component: CollectionEditComponent,
           },
           {
@@ -50,7 +50,7 @@ const routes: Routes = [
         component: ModelsComponent,
         children: [
           { path: '', component: ModelsListComponent },
-          { path: 'edit', component: ModelsEditComponent },
+          { path: 'edit/:id', component: ModelsEditComponent },
           { path: 'new', component: ModelsRegisterComponent },
           { path: '**', redirectTo: '', pathMatch: 'full' },
         ],
