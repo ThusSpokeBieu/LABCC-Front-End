@@ -21,6 +21,57 @@
       "id": 2
     }
   ],
-  "models": [],
-  "collections": []
+  "models": [
+    {
+      "id": 1,
+      "name": "Modelo 1",
+      "colection": 1
+    },
+    {
+      "id": 2,
+      "nome": "Modelo 2",
+      "colection": 1
+    }
+  ],
+  "collections": [
+    {
+      "models": [],
+      "quantityModels": 0,
+      "collectionName": "LOCURUA",
+      "responsible": "waw",
+      "season": "Verão",
+      "brand": "wa",
+      "budget": 3214,
+      "releaseYear": 32141,
+      "updatedAt": "2023-04-02T20:05:41.977Z",
+      "createdAt": "2023-04-02T20:05:41.977Z",
+      "id": 5
+    },
+    {
+      "models": [],
+      "quantityModels": 0,
+      "collectionName": "fae",
+      "responsible": "waw",
+      "season": "Verão",
+      "brand": "wa",
+      "budget": 3214,
+      "releaseYear": 32141,
+      "updatedAt": "2023-04-02T20:05:42.206Z",
+      "createdAt": "2023-04-02T20:05:42.206Z",
+      "id": 6
+    },
+    {
+      "models": [],
+      "quantityModels": 0,
+      "collectionName": "rew",
+      "responsible": "rew",
+      "season": "Verão",
+      "brand": "rwe432",
+      "budget": 5,
+      "releaseYear": 432,
+      "updatedAt": "2023-04-02T20:06:47.409Z",
+      "createdAt": "2023-04-02T20:06:47.409Z",
+      "id": 7
+    }
+  ]
 }

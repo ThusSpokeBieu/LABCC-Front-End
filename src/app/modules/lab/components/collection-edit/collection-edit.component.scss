@@ -31,6 +31,35 @@
   margin-top: 24px;
 }
 
+.form-actions button {
+  margin-right: 2em;
+  border-radius: 6px;
+  width: 11.25rem;
+  height: 3.125rem;
+}
+
 input {
   border-radius: 200px !important;
+}
+
+.collectionImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* opcional: define a altura do container */
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.save {
+  background-color: #0073cf !important;
+}
+
+.cancel {
+  background-color: #ebebeb !important;
+  color: #a098ae;
 }

@@ -47,8 +47,13 @@ export class CollectionEditComponent {
   onSubmit() {
     const collection = this.editCollectionForm.value;
     const id = parseInt(this.collectionId as string);
-    this.collectionService
-      .updateCollection(id, collection)
-      .subscribe((data) => console.log(data));
+    this.collectionService.updateCollection(id, collection).subscribe();
+    this.toastr.success(`Coleção atualizada com sucesso!`);
+  }
+
+  onDeleteClick() {
+    const id = parseInt(this.collectionId as string);
+    this.collectionService.deleteCollection(id).subscribe();
+    this.toastr.success(`Coleção excluída com sucesso`);
   }
 }

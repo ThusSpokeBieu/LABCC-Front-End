@@ -30,4 +30,8 @@ export class CollectionService {
   updateCollection(collectionId: number, inputData: Partial<Collection>) {
     return this.http.patch(`${this.endpoint}/${collectionId}`, inputData);
   }
+
+  deleteCollection(collectionId: number) {
+    return this.http.delete(`${this.endpoint}/${collectionId}`);
+  }
 }

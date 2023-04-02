@@ -55,11 +55,35 @@
           </mat-form-field>
         </div>
       </div>
+      <div class="collectionImg">
+        <img
+          src="../../../../../assets/imgs/collectionImg.svg"
+          alt="Imagem de coleção de roupas"
+        />
+      </div>
       <div class="form-actions">
-        <button mat-raised-button color="warn" routerLink="../">
-          Cancelar
-        </button>
-        <button mat-raised-button color="primary">Salvar</button>
+        <div class="delete-button">
+          <button
+            mat-raised-button
+            color="warn"
+            routerLink="../"
+            class="delete"
+            (click)="onDeleteClick()"
+          >
+            Excluir
+          </button>
+        </div>
+        <div class="other-button">
+          <button
+            mat-raised-button
+            color="basic"
+            routerLink="../"
+            class="cancel"
+          >
+            Cancelar
+          </button>
+          <button mat-raised-button color="primary" class="save">Salvar</button>
+        </div>
       </div>
     </form>
   </div>
