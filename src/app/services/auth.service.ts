@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserLoginData } from '../models/users/user-login.dto';
+import { UserLoginData } from '../models/user/user-login.dto';
 import { UserService } from './user.service';
-import { User } from '../models/users/user.model';
-import { UserAuthDto } from '../models/users/user-auth.dto';
+import { User } from '../models/user/user.model';
+import { UserAuthDto } from '../models/user/user-auth.dto';
 import { Observable } from 'rxjs';
 
 @Injectable({
