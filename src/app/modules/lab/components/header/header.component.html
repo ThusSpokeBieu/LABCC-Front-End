@@ -1,1 +1,26 @@
-<p>header works!</p>
+<div class="header-menu">
+  <span class="alert-icon">
+    <button mat-icon-button>
+      <img src="../../../../../assets/imgs/alertIcon.svg" alt="alert icon" />
+    </button>
+  </span>
+  <span class="avatar-icon">
+    <img src="../../../../../assets/imgs/avatarIcon.svg" alt="avatar-icon" />
+  </span>
+  <span class="toggle-menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onProfileClick()">
+        <mat-icon>person</mat-icon> Conta
+      </button>
+      <button mat-menu-item (click)="onSettingsClick()">
+        <mat-icon>settings</mat-icon> Configurações
+      </button>
+      <button mat-menu-item (click)="onLoggoutClick()">
+        <mat-icon>logout</mat-icon> Sair
+      </button>
+    </mat-menu>
+  </span>
+</div>

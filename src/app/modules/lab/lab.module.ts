@@ -8,7 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { ModelsComponent } from './components/models/models.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     CollectionComponent,
     ModelsComponent,
   ],
-  imports: [CommonModule, LabRoutingModule, MatSidenavModule],
+  imports: [CommonModule, LabRoutingModule, MaterialModule],
 })
 export class LabModule {}

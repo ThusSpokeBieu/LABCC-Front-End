@@ -1,12 +1,24 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "admin",
-      "company": "LABFashion LTDA",
-      "CNPJ": "434.064.470-66",
-      "email": "admin@lab.com",
-      "password": "adminTest"
+      "updatedAt": "2023-04-01T20:23:49.927Z",
+      "createdAt": "2023-04-01T20:23:49.927Z",
+      "name": "Admin",
+      "company": "LABFashion",
+      "cnpj": "12345678901234",
+      "email": "admin@labfashion.com.br",
+      "password": "labfashion",
+      "id": 1
+    },
+    {
+      "updatedAt": "2023-04-01T20:33:59.248Z",
+      "createdAt": "2023-04-01T20:33:59.248Z",
+      "name": "Teste",
+      "company": "teste",
+      "cnpj": "12345678901234",
+      "email": "teste@teste.com.br",
+      "password": "12345678",
+      "id": 2
     }
   ],
   "models": [
