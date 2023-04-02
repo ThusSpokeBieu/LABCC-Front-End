@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { ModelsComponent } from './components/models/models.component';
 import { MaterialModule } from '../material/material.module';
+import { DashboardCardsComponent } from './components/dashboard-cards/dashboard-cards.component';
+import { DashboardBudgetsComponent } from './components/dashboard-budgets/dashboard-budgets.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { MaterialModule } from '../material/material.module';
     HomeComponent,
     CollectionComponent,
     ModelsComponent,
+    DashboardCardsComponent,
+    DashboardBudgetsComponent,
   ],
   imports: [CommonModule, LabRoutingModule, MaterialModule],
 })
