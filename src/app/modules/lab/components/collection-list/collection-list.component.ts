@@ -28,6 +28,10 @@ export class CollectionListComponent {
     this.getCollections();
   }
 
+  ngOnChanges() {
+    this.getCollections();
+  }
+
   redirectToCollection(id: number) {
     console.log(id);
     this.router.navigateByUrl(`/lab/collections/edit/${id}`, {

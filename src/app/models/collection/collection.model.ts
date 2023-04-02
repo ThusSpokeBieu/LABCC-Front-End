@@ -10,7 +10,6 @@ export class Collection {
   brand!: string;
   budget!: number;
   releaseYear!: number;
-  models: Model[] = [];
   quantityModels: number = 0;
   updatedAt!: Date;
   createdAt!: Date;
@@ -29,7 +28,6 @@ export class Collection {
   }
 
   addModel(model: Model) {
-    this.models.push(model);
     this.quantityModels += 1;
   }
 }

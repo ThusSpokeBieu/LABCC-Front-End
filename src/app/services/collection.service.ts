@@ -18,6 +18,10 @@ export class CollectionService {
     return this.http.get<Collection[]>(`${this.endpoint}?id=${id}`);
   }
 
+  getCollectionByName(name: string): Observable<Collection[]> {
+    return this.http.get<Collection[]>(`${this.endpoint}?name=${name}`);
+  }
+
   getAllCollections(): Observable<Collection[]> {
     return this.http.get<Collection[]>(`${this.endpoint}`);
   }

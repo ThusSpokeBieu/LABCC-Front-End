@@ -1,1 +1,90 @@
-<p>models-edit works!</p>
+<
+<div class="model-register">
+  <div class="title">Editar Modelo</div>
+  <div class="edit-model-form">
+    <form
+      (ngSubmit)="onSubmit()"
+      name="editModelForm"
+      [formGroup]="editModelForm"
+    >
+      <div class="form-row">
+        <div class="form-column">
+          <mat-form-field appearance="outline">
+            <mat-label>Nome do Modelo</mat-label>
+            <input matInput formControlName="modelName" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Selecione a coleção?</mat-label>
+            <mat-select formControlName="collection">
+              <mat-option
+                *ngFor="let collection of collections"
+                [value]="collection.collectionName"
+              >
+                {{ collection.collectionName }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div>
+            <label>Tem bordado? </label>
+          </div>
+          <div>
+            <mat-radio-group formControlName="hasEmbroidery">
+              <mat-radio-button [value]="true">Sim</mat-radio-button>
+              <mat-radio-button [value]="false">Não</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="form-column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tipo de Modelo</mat-label>
+            <mat-select formControlName="modelType">
+              <mat-option
+                *ngFor="let modelType of modelTypes"
+                [value]="modelType"
+              >
+                {{ modelType }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Responsável pelo modelo</mat-label>
+            <input matInput formControlName="responsible" />
+          </mat-form-field>
+          <div>
+            <label>Tem estampa? </label>
+          </div>
+          <div>
+            <mat-radio-group formControlName="hasPrint">
+              <mat-radio-button [value]="true">Sim</mat-radio-button>
+              <mat-radio-button [value]="false">Não</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="form-actions">
+        <div class="delete-button">
+          <button
+            mat-raised-button
+            color="warn"
+            routerLink="../"
+            class="delete"
+            (click)="onDeleteClick()"
+          >
+            Excluir
+          </button>
+        </div>
+        <div class="other-button">
+          <button
+            mat-raised-button
+            color="basic"
+            routerLink="../"
+            class="cancel"
+          >
+            Cancelar
+          </button>
+          <button mat-raised-button color="primary" class="save">Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

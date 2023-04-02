@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CollectionDto } from 'src/app/models/collection/collection.dto';
 import { CollectionService } from 'src/app/services/collection.service';
@@ -14,7 +15,8 @@ export class CollectionRegisterComponent {
 
   constructor(
     private readonly toastr: ToastrService,
-    private readonly collectionService: CollectionService
+    private readonly collectionService: CollectionService,
+    private readonly router: Router
   ) {}
 
   ngOnInit() {
@@ -31,8 +33,12 @@ export class CollectionRegisterComponent {
   onSubmit() {
     if (this.newCollectionForm.valid) {
       const collection: CollectionDto = this.newCollectionForm.value;
-      console.log('oi');
       this.collectionService.registerNewCollection(collection).subscribe();
+      this.toastr.success(`Modelo criado com sucesso!`);
+      this.router.navigateByUrl(`/lab/collections`, {
+        skipLocationChange: true,
+        replaceUrl: true,
+      });
     } else {
       this.toastr.error(`Por favor, insira todos os campos corretamente.`);
     }

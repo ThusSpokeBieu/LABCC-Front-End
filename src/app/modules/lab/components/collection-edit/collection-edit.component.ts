@@ -46,6 +46,7 @@ export class CollectionEditComponent {
 
   onSubmit() {
     const collection = this.editCollectionForm.value;
+    collection.updatedAt = new Date();
     const id = parseInt(this.collectionId as string);
     this.collectionService.updateCollection(id, collection).subscribe();
     this.toastr.success(`Coleção atualizada com sucesso!`);
