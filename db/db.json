@@ -1,24 +1,46 @@
 {
-  "modelos": [
+  "users": [
+    {
+      "updatedAt": "2023-04-01T20:23:49.927Z",
+      "createdAt": "2023-04-01T20:23:49.927Z",
+      "name": "Admin",
+      "company": "LABFashion",
+      "cnpj": "12345678901234",
+      "email": "admin@labfashion.com.br",
+      "password": "labfashion",
+      "id": 1
+    },
+    {
+      "updatedAt": "2023-04-01T20:33:59.248Z",
+      "createdAt": "2023-04-01T20:33:59.248Z",
+      "name": "Teste",
+      "company": "teste",
+      "cnpj": "12345678901234",
+      "email": "teste@teste.com.br",
+      "password": "12345678",
+      "id": 2
+    }
+  ],
+  "models": [
     {
       "id": 1,
-      "nome": "Modelo 1",
-      "colecao": 1
+      "name": "Modelo 1",
+      "colection": 1
     },
     {
       "id": 2,
       "nome": "Modelo 2",
-      "colecao": 1
+      "colection": 1
     }
   ],
-  "colecoes": [
+  "colections": [
     {
       "id": 1,
-      "nome": "Coleção 1"
+      "name": "Coleção 1"
     },
     {
       "id": 2,
-      "nome": "Coleção 2"
+      "name": "Coleção 2"
     }
   ]
 }

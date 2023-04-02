@@ -1,0 +1,123 @@
+<div class="sign-in-container">
+  <div class="icon-container">
+    <img src="../../../assets/imgs/audacesIcon.svg" alt="audaces icon" />
+  </div>
+  <div class="sign-in-form-container">
+    <mat-card>
+      <mat-card-content>
+        <div class="header">
+          <h2 class="title">Sign Up</h2>
+          <p>Insira seus dados para criar uma conta</p>
+        </div>
+        <form
+          (ngSubmit)="onSubmit()"
+          name="signUpForm"
+          [formGroup]="signUpForm"
+        >
+          <div class="form-input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nome</mat-label>
+              <input formControlName="name" matInput required />
+              <mat-error
+                class="error-message"
+                *ngIf="signUpForm.get('name')?.errors?.['required']"
+              >
+                - O nome é obrigatório.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Empresa</mat-label>
+              <input formControlName="company" matInput required />
+              <mat-error
+                class="error-message"
+                *ngIf="signUpForm.get('company')?.errors?.['required']"
+              >
+                - A empresa é obrigatória.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>CNPJ</mat-label>
+              <input formControlName="cnpj" matInput required />
+              <mat-error
+                class="error-message"
+                *ngIf="signUpForm.get('cnpj')?.errors?.['required']"
+              >
+                - O cnpj da empresa é obrigatório.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>E-mail</mat-label>
+              <input formControlName="email" matInput required />
+              <mat-error
+                class="error-message"
+                *ngIf="signUpForm.get('email')?.errors?.['required']"
+              >
+                - O e-mail é obrigatório.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="password-input">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Senha</mat-label>
+              <input
+                formControlName="password"
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                required
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hidePassword = !hidePassword"
+                [attr.aria-label]="'hide password'"
+                [attr.aria.pressed]="hidePassword"
+              >
+                <mat-icon>{{
+                  hidePassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+              <mat-error
+                class="error-message"
+                *ngIf="signUpForm.get('password')?.errors?.['required']"
+              >
+                - A senha é obrigatória.
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Confirme a senha</mat-label>
+              <input
+                formControlName="confirmPassword"
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                required
+              />
+              <mat-error
+                class="error-message"
+                *ngIf="
+                  signUpForm.get('confirmPassword')?.errors?.['passwordMatchValidator']
+                "
+              >
+                - As senhas devem ser idênticas.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <button mat-raised-button color="primary" class="login-button">
+            Registrar
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="redirect-wrapper">
+    <p>Já tem uma conta? <a routerLink="../sign-in">Entre</a></p>
+    <p>
+      Esqueceu sua senha? <a routerLink="../forgot-password">Redefinir senha</a>
+    </p>
+  </div>
+</div>
