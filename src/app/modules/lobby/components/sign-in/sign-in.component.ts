@@ -31,16 +31,19 @@ export class SignInComponent {
 
   ngOnInit() {
     this.loginForm = new FormGroup({
-      email: new FormControl('', [
-        Validators.required,
-        Validators.email,
-        Validators.minLength(8),
-      ]),
+      email: new FormControl(
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.email,
+          Validators.minLength(8),
+        ])
+      ),
 
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(8),
-      ]),
+      password: new FormControl(
+        '',
+        Validators.compose([Validators.required, Validators.minLength(8)])
+      ),
     });
   }
 
