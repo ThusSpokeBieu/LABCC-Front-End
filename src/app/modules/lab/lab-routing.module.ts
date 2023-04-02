@@ -14,7 +14,7 @@ const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
       },
-      { path: 'collection', component: CollectionComponent },
+      { path: 'collections', component: CollectionComponent },
       { path: 'models', component: ModelsComponent },
       { path: '**', redirectTo: '/lab/dashboard', pathMatch: 'full' },
     ],
