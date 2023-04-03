@@ -37,6 +37,8 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
+    this.loginExists();
+
     const haveToken = !!this.getToken;
     const havePassport = !!this.getPassport;
 
@@ -52,6 +54,26 @@ export class AuthService {
     if (this.getPassport !== null) localStorage.removeItem('passport');
     sessionStorage.clear();
     this.router.navigate(['login']);
+  }
+
+  loginExists() {
+    const passport = this.getPassport();
+
+    if (!passport) {
+      return this.logout();
+    }
+
+    this.userService.getUserByEmail(passport.email).subscribe((users) => {
+      if (
+        users[0].email !== passport.email ||
+        users[0].id !== passport.id ||
+        users[0].cnpj !== passport.cnpj ||
+        users[0].company !== passport.company ||
+        users[0].name !== passport.name
+      ) {
+        return this.logout();
+      }
+    });
   }
 
   login(data: UserLoginData): boolean {
