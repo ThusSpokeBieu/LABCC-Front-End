@@ -2,6 +2,10 @@
 
 O projeto de finalização do módulo 1 do curso DEVinHouse: Audaces. Tem como objetivo por em prática conhecimentos aprendidos sobre front-end, usando o framework Angular.
 
+O vídeo enviado ficou sem áudio, o com áudio ainda está importando. Como não tenho tempo para esperar, e não posso editar o repositório, vou deixar o link de um google docs para com ovídeo com audio:
+
+https://docs.google.com/document/d/1CYBWirdURxBRUDbfI7QI11xeyPYsiE49R0L_N6UOshc/edit?usp=sharing
+
 ## Dependências
 - NodeJS
 - PNPM (ou outro gerenciador de pacotes)
