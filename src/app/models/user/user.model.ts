@@ -1,5 +1,5 @@
 import { UserRegisterDto } from './user-register.dto';
-
+import { hash } from 'argon2';
 export class User {
   id!: number;
   name!: string;
@@ -16,9 +16,13 @@ export class User {
       this.company = newUser?.company;
       this.cnpj = newUser?.cnpj;
       this.email = newUser?.email;
-      this.password = newUser?.password;
+      this.hashPass(newUser?.password);
     }
     this.updatedAt = new Date();
     this.createdAt = new Date();
+  }
+
+  async hashPass(pass: string) {
+    this.password = await hash(pass);
   }
 }

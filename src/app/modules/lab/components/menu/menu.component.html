@@ -2,11 +2,23 @@
   <div class="logo-container">
     <img src="../../../../../assets/imgs/fullLogo.svg" alt="audaces icon" />
   </div>
-  <ul>
-    <li routerLinkActive="active"><a routerLink="./dashboard">Dashboard</a></li>
-    <li routerLinkActive="active">
-      <a routerLink="./collection">Collection</a>
-    </li>
-    <li routerLinkActive="active"><a routerLink="./models">Models</a></li>
-  </ul>
+
+  <p class="list-title">MENU</p>
+  <mat-nav-list>
+    <a mat-list-item routerLink="/lab/dashboard" routerLinkActive="active"
+      ><span class="list-item">Dashboard</span></a
+    >
+    <a mat-list-item routerLink="/lab/collections" routerLinkActive="active"
+      ><span class="list-item">Coleções</span></a
+    >
+    <a mat-list-item routerLink="/lab/models" routerLinkActive="active"
+      ><span class="list-item">Modelos</span></a
+    >
+    <a mat-list-item (click)="onHelpClick()"
+      ><span class="list-item">Obter ajuda</span></a
+    >
+    <a mat-list-item (click)="onSendFeedbackClick()"
+      ><span class="list-item">Enviar comentários</span></a
+    >
+  </mat-nav-list>
 </div>
