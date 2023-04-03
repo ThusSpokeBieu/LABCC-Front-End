@@ -4,6 +4,7 @@ import { UserLoginData } from '../models/user/user-login.dto';
 import { UserService } from './user.service';
 import { User } from '../models/user/user.model';
 import { UserAuthDto } from '../models/user/user-auth.dto';
+import { verify } from 'argon2';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -79,11 +80,21 @@ export class AuthService {
   login(data: UserLoginData): boolean {
     const { email } = data;
     this.userService.getUserByEmail(email).subscribe((users) => {
-      const passport = new UserAuthDto(users[0]);
-      this.setToken('absdaeuhoíun-8y-7y4103t681b');
-      this.setPassport(passport);
+      if (!!this.verifyPassword(users[0].password, data.password)) {
+        const passport = new UserAuthDto(users[0]);
+        this.setToken('absdaeuhoíun-8y-7y4103t681b');
+        this.setPassport(passport);
+      }
     });
 
     return this.isLoggedIn();
+  }
+
+  async verifyPassword(hash: string, password: string): Promise<Boolean> {
+    if (await verify(hash, password)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
