@@ -1,1 +1,29 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+  <div class="title">Dashboard</div>
+  <div class="collection-cards">
+    <mat-grid-list cols="3" rowHeight="15.625rem">
+      <mat-grid-tile>
+        <app-dashboard-cards
+          [cardTitle]="'Coleções'"
+          [totalQuantity]="collections"
+        >
+        </app-dashboard-cards>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-dashboard-cards [cardTitle]="'Modelos'" [totalQuantity]="models">
+        </app-dashboard-cards>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-dashboard-cards
+          [cardTitle]="'Orçamento Médio (R$)'"
+          [totalQuantity]="averageBudget"
+        >
+        </app-dashboard-cards>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="bigger-budgets">
+    <div class="budgets-title">Maiores Orçamentos</div>
+    <app-dashboard-budgets [budgets]="biggerBudgets"></app-dashboard-budgets>
+  </div>
+</div>

@@ -1,46 +1,65 @@
 {
   "users": [
     {
-      "updatedAt": "2023-04-01T20:23:49.927Z",
-      "createdAt": "2023-04-01T20:23:49.927Z",
       "name": "Admin",
       "company": "LABFashion",
       "cnpj": "12345678901234",
-      "email": "admin@labfashion.com.br",
-      "password": "labfashion",
+      "email": "admin@lab.com",
+      "password": "012345678",
+      "updatedAt": "2023-04-03T00:24:25.060Z",
+      "createdAt": "2023-04-03T00:24:25.060Z",
       "id": 1
-    },
-    {
-      "updatedAt": "2023-04-01T20:33:59.248Z",
-      "createdAt": "2023-04-01T20:33:59.248Z",
-      "name": "Teste",
-      "company": "teste",
-      "cnpj": "12345678901234",
-      "email": "teste@teste.com.br",
-      "password": "12345678",
-      "id": 2
     }
   ],
   "models": [
     {
-      "id": 1,
-      "name": "Modelo 1",
-      "colection": 1
-    },
-    {
-      "id": 2,
-      "nome": "Modelo 2",
-      "colection": 1
+      "modelName": "testedawear",
+      "collection": "Teste",
+      "hasEmbroidery": false,
+      "modelType": "Bermuda",
+      "responsible": "ewa",
+      "hasPrint": true,
+      "updatedAt": "2023-04-02T23:46:57.240Z",
+      "createdAt": "2023-04-02T23:46:57.240Z",
+      "id": 1
     }
   ],
-  "colections": [
+  "collections": [
     {
-      "id": 1,
-      "name": "Coleção 1"
-    },
-    {
-      "id": 2,
-      "name": "Coleção 2"
+      "models": [
+        {
+          "modelName": "Teste",
+          "collection": "Teste",
+          "hasEmbroidery": true,
+          "modelType": "Bermuda",
+          "responsible": "euu",
+          "hasPrint": true,
+          "updatedAt": "2023-04-02T23:30:15.842Z",
+          "createdAt": "2023-04-02T23:30:15.842Z",
+          "id": 1
+        },
+        {
+          "modelName": "Teste",
+          "collection": "Teste",
+          "hasEmbroidery": false,
+          "modelType": "Bermuda",
+          "responsible": "i",
+          "hasPrint": true,
+          "updatedAt": "2023-04-02T23:30:49.324Z",
+          "createdAt": "2023-04-02T23:30:49.324Z",
+          "id": 2
+        }
+      ],
+      "quantityModels": 3,
+      "collectionName": "Teste",
+      "responsible": "oi",
+      "season": "Verão",
+      "brand": "oi",
+      "budget": 48979,
+      "releaseYear": 2024,
+      "updatedAt": "2023-04-02T23:30:49.736Z",
+      "createdAt": "2023-04-02T23:29:59.247Z",
+      "id": 1
     }
   ]
 }
