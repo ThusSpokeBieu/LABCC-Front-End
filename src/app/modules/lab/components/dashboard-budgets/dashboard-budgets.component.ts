@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CollectionDashboardDto } from 'src/app/models/collection/collection-dashboard.dto';
+import { Collection } from 'src/app/models/collection/collection.model';
 
 @Component({
   selector: 'app-dashboard-budgets',
@@ -7,6 +7,6 @@ import { CollectionDashboardDto } from 'src/app/models/collection/collection-das
   styleUrls: ['./dashboard-budgets.component.scss'],
 })
 export class DashboardBudgetsComponent {
-  @Input() budgets: CollectionDashboardDto[] = [];
+  @Input() budgets: Collection[] = [];
   columnsDisplay: string[] = ['collection', 'responsible', 'models', 'budget'];
 }

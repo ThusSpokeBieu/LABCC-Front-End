@@ -3,17 +3,20 @@
   <div class="collection-cards">
     <mat-grid-list cols="3" rowHeight="15.625rem">
       <mat-grid-tile>
-        <app-dashboard-cards [cardTitle]="'Coleções'" [totalQuantity]="0">
+        <app-dashboard-cards
+          [cardTitle]="'Coleções'"
+          [totalQuantity]="collections"
+        >
         </app-dashboard-cards>
       </mat-grid-tile>
       <mat-grid-tile>
-        <app-dashboard-cards [cardTitle]="'Modelos'" [totalQuantity]="0">
+        <app-dashboard-cards [cardTitle]="'Modelos'" [totalQuantity]="models">
         </app-dashboard-cards>
       </mat-grid-tile>
       <mat-grid-tile>
         <app-dashboard-cards
           [cardTitle]="'Orçamento Médio (R$)'"
-          [totalQuantity]="0"
+          [totalQuantity]="averageBudget"
         >
         </app-dashboard-cards>
       </mat-grid-tile>
@@ -21,6 +24,6 @@
   </div>
   <div class="bigger-budgets">
     <div class="budgets-title">Maiores Orçamentos</div>
-    <app-dashboard-budgets></app-dashboard-budgets>
+    <app-dashboard-budgets [budgets]="biggerBudgets"></app-dashboard-budgets>
   </div>
 </div>
