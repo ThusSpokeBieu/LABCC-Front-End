@@ -11,23 +11,13 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SignInComponent {
   loginForm!: FormGroup;
-  isLoggedIn: boolean = false;
   hide: boolean = true;
 
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router,
     private readonly toastr: ToastrService
-  ) {
-    console.log(this.authService.isLoggedIn());
-    console.log(this.authService.getPassport());
-    console.log(this.authService.getToken());
-    /*    this.authService.logout();
-
-    if (this.authService.isLoggedIn()) {
-      this.router.navigate(['lab']);
-    }*/
-  }
+  ) {}
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -61,13 +51,7 @@ export class SignInComponent {
     }
 
     if (loginData.valid) {
-      this.isLoggedIn = this.authService.login(loginData.value);
-      console.log(this.isLoggedIn);
-      console.log(this.authService.getPassport());
-      this.toastr.success(`Entrou com sucesso! Seja bem-vindo novamente.`);
-      this.router.navigate([`lab`]);
-    } else {
-      this.toastr.error(`E-mail ou senha inválidos.`);
+      this.authService.login(loginData.value);
     }
   }
 }

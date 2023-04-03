@@ -35,10 +35,6 @@ export class CollectionRegisterComponent {
       const collection: CollectionDto = this.newCollectionForm.value;
       this.collectionService.registerNewCollection(collection).subscribe();
       this.toastr.success(`Modelo criado com sucesso!`);
-      this.router.navigateByUrl(`/lab/collections`, {
-        skipLocationChange: true,
-        replaceUrl: true,
-      });
     } else {
       this.toastr.error(`Por favor, insira todos os campos corretamente.`);
     }
