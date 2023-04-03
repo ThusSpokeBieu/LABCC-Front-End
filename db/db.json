@@ -13,53 +13,101 @@
   ],
   "models": [
     {
-      "modelName": "testedawear",
-      "collection": "Teste",
-      "hasEmbroidery": false,
-      "modelType": "Bermuda",
-      "responsible": "ewa",
-      "hasPrint": true,
-      "updatedAt": "2023-04-02T23:46:57.240Z",
-      "createdAt": "2023-04-02T23:46:57.240Z",
+      "modelName": "Camisa de Praia",
+      "collection": "LABCoast 2024",
+      "hasEmbroidery": true,
+      "modelType": "Camisa",
+      "responsible": "Gabriel Costa",
+      "hasPrint": false,
+      "updatedAt": "2023-04-03T01:56:10.891Z",
+      "createdAt": "2023-04-03T01:56:10.891Z",
       "id": 1
     }
   ],
   "collections": [
     {
-      "models": [
-        {
-          "modelName": "Teste",
-          "collection": "Teste",
-          "hasEmbroidery": true,
-          "modelType": "Bermuda",
-          "responsible": "euu",
-          "hasPrint": true,
-          "updatedAt": "2023-04-02T23:30:15.842Z",
-          "createdAt": "2023-04-02T23:30:15.842Z",
-          "id": 1
-        },
-        {
-          "modelName": "Teste",
-          "collection": "Teste",
-          "hasEmbroidery": false,
-          "modelType": "Bermuda",
-          "responsible": "i",
-          "hasPrint": true,
-          "updatedAt": "2023-04-02T23:30:49.324Z",
-          "createdAt": "2023-04-02T23:30:49.324Z",
-          "id": 2
-        }
-      ],
-      "quantityModels": 3,
-      "collectionName": "Teste",
-      "responsible": "oi",
-      "season": "Verão",
-      "brand": "oi",
-      "budget": 48979,
+      "quantityModels": 1,
+      "collectionName": "LABFashion Primavera2024",
+      "responsible": "John Doe",
+      "season": "Primavera",
+      "brand": "Brand",
+      "budget": 10000,
       "releaseYear": 2024,
-      "updatedAt": "2023-04-02T23:30:49.736Z",
-      "createdAt": "2023-04-02T23:29:59.247Z",
+      "updatedAt": "2023-04-03T01:48:57.551Z",
+      "createdAt": "2023-04-03T01:48:57.551Z",
       "id": 1
+    },
+    {
+      "quantityModels": 0,
+      "collectionName": "LABCoast 2024",
+      "responsible": "Gabriel Costa",
+      "season": "Verão",
+      "brand": "Coast",
+      "budget": 15000,
+      "releaseYear": 2024,
+      "updatedAt": "2023-04-03T01:50:38.644Z",
+      "createdAt": "2023-04-03T01:50:38.644Z",
+      "id": 2
+    },
+    {
+      "quantityModels": 0,
+      "collectionName": "LCollection",
+      "responsible": "Sarah Oliver",
+      "season": "Outono",
+      "brand": "LABFashions",
+      "budget": 20000,
+      "releaseYear": 2023,
+      "updatedAt": "2023-04-03T01:51:27.495Z",
+      "createdAt": "2023-04-03T01:51:27.495Z",
+      "id": 3
+    },
+    {
+      "quantityModels": 0,
+      "collectionName": "Fashion Kids",
+      "responsible": "Gabriel Costa",
+      "season": "Inverno",
+      "brand": "LABKids",
+      "budget": 20000,
+      "releaseYear": 2024,
+      "updatedAt": "2023-04-03T01:52:54.211Z",
+      "createdAt": "2023-04-03T01:52:54.211Z",
+      "id": 4
+    },
+    {
+      "quantityModels": 0,
+      "collectionName": "DummyCollection1",
+      "responsible": "Dummy",
+      "season": "Verão",
+      "brand": "Dummy",
+      "budget": 5000,
+      "releaseYear": 2024,
+      "updatedAt": "2023-04-03T01:53:42.261Z",
+      "createdAt": "2023-04-03T01:53:42.261Z",
+      "id": 5
+    },
+    {
+      "quantityModels": 0,
+      "collectionName": "DummyCollection2",
+      "responsible": "Dummy",
+      "season": "Verão",
+      "brand": "Dummy",
+      "budget": 17000,
+      "releaseYear": 2025,
+      "updatedAt": "2023-04-03T01:54:12.943Z",
+      "createdAt": "2023-04-03T01:54:12.943Z",
+      "id": 6
+    },
+    {
+      "quantityModels": 0,
+      "collectionName": "Costa LAB",
+      "responsible": "Gabriel Costa",
+      "season": "Primavera",
+      "brand": "Costa",
+      "budget": 25000,
+      "releaseYear": 2026,
+      "updatedAt": "2023-04-03T01:55:18.158Z",
+      "createdAt": "2023-04-03T01:55:18.158Z",
+      "id": 7
     }
   ]
 }

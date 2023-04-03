@@ -4,16 +4,20 @@ import { UserLoginData } from '../models/user/user-login.dto';
 import { UserService } from './user.service';
 import { User } from '../models/user/user.model';
 import { UserAuthDto } from '../models/user/user-auth.dto';
-import { verify } from 'argon2';
-import { Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private toastr: ToastrService
+  ) {}
   user!: User;
   authUser!: UserAuthDto;
+  correctCredentials!: boolean;
 
   setToken(token: string): void {
     localStorage.setItem('token', token);
@@ -40,19 +44,22 @@ export class AuthService {
   isLoggedIn(): boolean {
     this.loginExists();
 
-    const haveToken = !!this.getToken;
-    const havePassport = !!this.getPassport;
+    const haveToken = !!this.getToken();
+    const havePassport = !!this.getPassport();
 
+    console.log(haveToken);
+    console.log(havePassport);
     if (haveToken && havePassport) {
       return true;
     } else {
+      this.logout();
       return false;
     }
   }
 
   logout(): void {
-    if (this.getToken !== null) localStorage.removeItem('token');
-    if (this.getPassport !== null) localStorage.removeItem('passport');
+    if (this.getToken() !== null) localStorage.removeItem('token');
+    if (this.getPassport() !== null) localStorage.removeItem('passport');
     sessionStorage.clear();
     this.router.navigate(['login']);
   }
@@ -77,24 +84,21 @@ export class AuthService {
     });
   }
 
-  login(data: UserLoginData): boolean {
+  login(data: UserLoginData) {
     const { email } = data;
     this.userService.getUserByEmail(email).subscribe((users) => {
-      if (!!this.verifyPassword(users[0].password, data.password)) {
+      if (users[0].password === data.password) {
         const passport = new UserAuthDto(users[0]);
         this.setToken('absdaeuhoíun-8y-7y4103t681b');
         this.setPassport(passport);
+        this.toastr.success(
+          `Login realizado com sucesso, seja bem vindo novamente!`
+        );
+        this.router.navigate([`lab`]);
+      } else {
+        this.logout();
+        this.toastr.error(`Email ou senha inválidos`);
       }
     });
-
-    return this.isLoggedIn();
-  }
-
-  async verifyPassword(hash: string, password: string): Promise<Boolean> {
-    if (await verify(hash, password)) {
-      return true;
-    } else {
-      return false;
-    }
   }
 }
