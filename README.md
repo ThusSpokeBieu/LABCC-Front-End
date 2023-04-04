@@ -6,7 +6,7 @@
 
 O projeto de finalização do módulo 1 do curso DEVinHouse: Audaces. Tem como objetivo por em prática conhecimentos aprendidos sobre front-end, usando o framework Angular.
 
-- [Vídeo de Apresentação do Projeto](https://drive.google.com/uc?id=11GtGP30kmYYzwdD1WsTa8Fedma5zWVeP&export=download)
+- [Vídeo de Apresentação do Projeto](https://drive.google.com/file/d/11GtGP30kmYYzwdD1WsTa8Fedma5zWVeP/view?usp=sharing))
 - [Kanban Usado no projeto](https://trello.com/b/lrtFNE00/lab-clothing-collection)
 
 
@@ -21,8 +21,8 @@ O projeto de finalização do módulo 1 do curso DEVinHouse: Audaces. Tem como o
    - [Lobby - Forgot Password](#lobby---forgot-password)
    - [Lab - Menu](#lab---menu)
    - [Lab - Dashboard](#lab---dashboard)
-   - [Lab - Collection](#lab---coleções)
-   - [Lab - Model](#lab---modelos)
+   - [Lab - Collection](#lab---collection)
+   - [Lab - Model](#lab---model)
 - [Services](#services)
 - [Guards](#guards)
 
