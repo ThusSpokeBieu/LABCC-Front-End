@@ -6,23 +6,23 @@
 
 O projeto de finalização do módulo 1 do curso DEVinHouse: Audaces. Tem como objetivo por em prática conhecimentos aprendidos sobre front-end, usando o framework Angular.
 
-O vídeo enviado ficou sem áudio, o com áudio ainda está importando. Como não tenho tempo para esperar, e não posso editar o repositório, vou deixar o link de um google docs para com ovídeo com audio:
+- [Vídeo de Apresentação do Projeto](https://drive.google.com/uc?id=11GtGP30kmYYzwdD1WsTa8Fedma5zWVeP&export=download)
+- [Kanban Usado no projeto](https://trello.com/b/lrtFNE00/lab-clothing-collection)
 
-https://docs.google.com/document/d/1CYBWirdURxBRUDbfI7QI11xeyPYsiE49R0L_N6UOshc/edit?usp=sharing
 
 ## Indice
 
-- [Dependências e Tecnologias](#dependencias-e-tenologias)
+- [Dependências e Tecnologias](#dependências-e-tecnologias)
 - [Como instalar](#como-instalar)
 - [Como rodar](#como-rodar)
-- [Módulos e Componentes](#modulos-e-componentes)
-   - [Lobby - Sign In](#lobby-sign-in)
-   - [Lobby - Sign Up](#lobby-sign-up)
-   - [Lobby - Forgot Password](#lobby-forgot-password)
-   - [Lab - Menu](#lab-menu)
-   - [Lab - Dashboard](#lab-dashboard)
-   - [Lab - Collection](#lab-coleções)
-   - [Lab - Model](#lab-modelos)
+- [Módulos e Componentes](#módulos-e-componentes)
+   - [Lobby - Sign In](#lobby---sign-in)
+   - [Lobby - Sign Up](#lobby---sign-up)
+   - [Lobby - Forgot Password](#lobby---forgot-password)
+   - [Lab - Menu](#lab---menu)
+   - [Lab - Dashboard](#lab---dashboard)
+   - [Lab - Collection](#lab---coleções)
+   - [Lab - Model](#lab---modelos)
 - [Services](#services)
 - [Guards](#guards)
 
